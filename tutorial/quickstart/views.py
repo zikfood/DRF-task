@@ -29,4 +29,3 @@ class LibraryView(BookViewSet):
     """
 
     search_fields = ['writer_name', 'name']
-    filter_backends = (filters.SearchFilter, )
