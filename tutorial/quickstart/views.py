@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from rest_framework import permissions
 
 from quickstart.models import Author, Book
@@ -29,3 +29,4 @@ class LibraryView(BookViewSet):
     """
 
     search_fields = ['writer_name', 'name']
+    filter_backends = (filters.SearchFilter, )
